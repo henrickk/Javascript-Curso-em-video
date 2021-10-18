@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Países</title>
+    <style>
+        div#moldura {
+            background: rgb(47, 47, 212);
+            width: 300px;
+            height: 350px;
+            margin: auto;
+            border: black;
+            text-align: center;
+        }
+        h1{
+            color: white;
+        }
+
+        </style>
+</head>
+
+<body>
+    <div id="moldura">
+        <h1>Qual sua nascionalidade?!</h1>
+        <input type="text" name="txtp" id="txtp">
+        <input type="button" value="Verificar" onclick="pesquisar()">
+        <div id="res">Resultado:</div>
+
+        <script>
+            function pesquisar() {
+                var pais = document.querySelector('input#txtp')
+                var res = document.querySelector('div#res')
+                res.innerText = `<p>Sua nascionalidade é ${pais} !</p>`
+
+                if (pais == 'Brasil') {
+                    res.innerHTML += `<p>Você é Brasileiro!</p>`
+                } else {
+                    res.innerHTML += `<p>Você é Estrangeiro!</p>`
+                }
+            }
+            
+        </script>
+    </div>
+</body>
+
+</html>

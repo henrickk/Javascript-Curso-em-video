@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Somas</title>
+</head>
+<body>
+
+  <h1>Soma de valores</h1>
+
+  <input type="number" name="sn1" id="sn1"> +
+  <input type="number" name="sn2" id="sn2">
+  <input type="button" value="Somar" onclick="ssss()">  
+
+  <div id="res">Resultado...</div>
+
+  <script>
+    function ssss() {
+      var tn1 = document.querySelector('input#sn1')
+      var tn2 = document.querySelector('input#sn2')
+
+      var res = document.getElementById('res')
+
+      var n1 = Number(tn1.value)
+      var n2 = Number(tn2.value)
+
+      var result = n1 + n2
+
+      res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${result}</strong>`
+    }
+  </script>
+
+</body>
+</html>
